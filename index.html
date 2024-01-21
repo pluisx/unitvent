@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSNGROUP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .font-open-sans {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-open-sans bg-cover" style="background-image: url('https://placehold.co/1920x1080')">
+    <div class="flex flex-col h-screen">
+        <!-- Header -->
+        <header class="flex justify-between items-center p-5 bg-black bg-opacity-50 text-white">
+            <div class="text-3xl"><i class="fas fa-bars"></i> DSNGROUP</div>
+            <div class="space-x-4">
+                <span>EN <i class="fas fa-caret-down"></i></span>
+                <button class="px-3 py-2 border border-white rounded">Login</button>
+                <button class="px-3 py-2 bg-blue-600 rounded">Register</button>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <div class="flex-grow flex items-center justify-between p-10">
+            <!-- Text content -->
+            <div class="max-w-lg">
+                <h1 class="text-white text-5xl mb-5">International DISTRIBUTOR OF SPORTS NUTRITION</h1>
+                <p class="text-blue-400 text-3xl">8+ years on the market</p>
+            </div>
+            <!-- Right side panel -->
+            <div class="max-w-md p-5 bg-black bg-opacity-50 text-white">
+                <h2 class="text-2xl mb-5">Get access to:</h2>
+                <p class="text-xl">25 000 products</p>
+                <p class="text-xl">70+ Brands</p>
+                <button class="mt-5 px-5 py-3 bg-blue-600 rounded text-lg">Right now</button>
+            </div>
+        </div>
+
+        <!-- Chat bubble -->
+        <div class="absolute bottom-5 right-5">
+            <div class="flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full">
+                <i class="fas fa-comments"></i>
+            </div>
+            <div class="text-center text-white">We are online! Ask your question in the chat</div>
+        </div>
+    </div>
+</body>
+</html>
