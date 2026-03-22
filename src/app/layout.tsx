@@ -9,13 +9,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Unitvent | Automatizacion Inteligente y Desarrollo de Software",
-  description: "Transformamos ideas en soluciones digitales. Desarrollo de software personalizado, automatizacion de procesos e inteligencia artificial para impulsar tu negocio.",
-  keywords: "desarrollo software, automatizacion, inteligencia artificial, ERP, CRM, apps moviles, transformacion digital, Mexico",
+  title: "Unitvent | Automation Systems and Custom Software",
+  description:
+    "We design workflows, automation systems and custom software for teams that need cleaner operations and better visibility.",
+  keywords:
+    "custom software, workflow automation, operations systems, internal tools, AI systems, digital transformation",
   authors: [{ name: "Unitvent" }],
   openGraph: {
-    title: "Unitvent | Automatizacion Inteligente",
-    description: "Transformamos ideas en soluciones digitales para impulsar tu negocio.",
+    title: "Unitvent | Automation Systems and Custom Software",
+    description:
+      "We build software and workflow systems that help teams operate with more clarity, speed and control.",
     url: "https://unitvent.com",
     siteName: "Unitvent",
     type: "website",
@@ -28,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link

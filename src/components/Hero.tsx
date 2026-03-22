@@ -3,9 +3,9 @@
 import Link from 'next/link';
 
 const stats = [
-  { value: '2–6 sem', label: 'para lanzar un sistema útil' },
-  { value: '↓ 40%', label: 'menos trabajo manual en operaciones' },
-  { value: '24/7', label: 'visibilidad sobre el workflow' },
+  { value: '2–6 wks', label: 'to launch a system your team can actually use' },
+  { value: '↓ 40%', label: 'less manual work across operations' },
+  { value: '24/7', label: 'visibility into what is moving and what is stuck' },
 ];
 
 const Hero = () => {
@@ -21,16 +21,16 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <div className="badge mb-10 animate-fade-in-up justify-center">
             <span className="w-2.5 h-2.5 rounded-full bg-[#27c46b] animate-pulse" />
-            <span>Operaciones, automatización y software a medida</span>
+            <span>Operations, automation and custom software</span>
           </div>
 
           <h1 className="text-[42px] md:text-[62px] lg:text-[82px] font-medium leading-[1.02] tracking-[-2px] mb-8 animate-fade-in-up delay-100">
-            Diseñamos sistemas que tu equipo{' '}
-            <span className="gradient-text">sí quiere usar</span>
+            We build systems your team will{' '}
+            <span className="gradient-text">actually use</span>
           </h1>
 
           <p className="text-base md:text-xl text-[#8a8a8a] max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-200">
-            Unitvent convierte procesos manuales y operaciones rotas en workflows claros, dashboards útiles y software interno listo para operar.
+            Unitvent turns messy workflows and manual operations into clear systems, usable dashboards and internal software built for real execution.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300 mb-16">
@@ -41,7 +41,7 @@ const Hero = () => {
               </svg>
             </Link>
             <Link href="#process" className="btn-secondary px-8 py-4">
-              Ver cómo trabajamos
+              See how we work
             </Link>
           </div>
 
