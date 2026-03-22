@@ -35,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -42,7 +43,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+main {
+  overflow-x: clip;
+}
+
+section {
+  max-width: 100%;
 }
 
 /* Satoshi headings - RoboLabs style */

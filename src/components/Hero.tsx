@@ -24,7 +24,7 @@ const Hero = () => {
             <span>Operations, automation and custom software</span>
           </div>
 
-          <h1 className="text-[42px] md:text-[62px] lg:text-[82px] font-medium leading-[1.02] tracking-[-2px] mb-8 animate-fade-in-up delay-100">
+          <h1 className="text-[40px] sm:text-[42px] md:text-[62px] lg:text-[82px] font-medium leading-[1.02] tracking-[-2px] mb-8 animate-fade-in-up delay-100 break-words">
             We build systems your team will{' '}
             <span className="gradient-text">actually use</span>
           </h1>
@@ -45,7 +45,7 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto animate-fade-in-up delay-400">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto animate-fade-in-up delay-400 w-full">
             {stats.map((stat) => (
               <div key={stat.label} className="rounded-[24px] border border-[#1f1f1f] bg-[#0d0d0d]/90 px-6 py-5 text-left backdrop-blur-sm">
                 <div className="text-2xl md:text-3xl font-medium mb-2">{stat.value}</div>

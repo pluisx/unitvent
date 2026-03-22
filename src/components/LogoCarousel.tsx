@@ -17,7 +17,7 @@ const LogoCarousel = () => {
         <p className="text-center text-[#6b6b6b] text-sm md:text-base">Our core technologies</p>
       </div>
 
-      <div className="relative max-w-[1120px] mx-auto">
+      <div className="relative max-w-[1120px] mx-auto overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
