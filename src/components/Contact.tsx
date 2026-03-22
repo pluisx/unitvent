@@ -24,29 +24,24 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section-padding relative">
-      {/* Background */}
       <div className="absolute inset-0 bg-[#050505]" />
-
-      {/* Ambient glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(ellipse_50%_50%_at_50%_0%,rgba(227,109,0,0.08)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left Column - Info */}
           <div>
             <div className="badge mb-6">
               <span className="badge-dot" />
-              <span>Contacto</span>
+              <span>Contact</span>
             </div>
             <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-medium tracking-[-1px] mb-6">
-              Listo para <span className="gradient-text">Transformar</span> tu Negocio?
+              Ready to turn messy ops into{' '}
+              <span className="gradient-text">a working system</span>?
             </h2>
             <p className="text-[#8a8a8a] text-base leading-relaxed mb-12">
-              Cuentanos sobre tu proyecto y te ayudaremos a encontrar la mejor
-              solucion tecnologica para tu empresa.
+              Tell us where things break today, and we’ll help you define the fastest path to a cleaner workflow.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-4 group">
                 <div className="icon-container group-hover:border-[#e36d00] group-hover:shadow-[0_0_20px_rgba(227,109,0,0.2)] transition-all duration-300">
@@ -67,7 +62,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm text-[#6b6b6b] mb-1">Telefono</div>
+                  <div className="text-sm text-[#6b6b6b] mb-1">Phone</div>
                   <div className="text-white text-sm">+1 470 223 2740</div>
                 </div>
               </div>
@@ -80,100 +75,37 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm text-[#6b6b6b] mb-1">Ubicacion</div>
+                  <div className="text-sm text-[#6b6b6b] mb-1">Location</div>
                   <div className="text-white text-sm">Atlanta, Georgia</div>
                 </div>
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className="mt-12">
-              <div className="text-xs text-[#6b6b6b] uppercase tracking-[0.2em] mb-4">Siguenos</div>
-              <div className="flex gap-3">
-                {['Li', 'X', 'Gh'].map((social, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="w-10 h-10 rounded-xl bg-[#0f0f0f] border border-[#212121] flex items-center justify-center text-[#6b6b6b] hover:text-[#e36d00] hover:border-[#e36d00] transition-all duration-300"
-                  >
-                    <span className="text-xs font-medium">{social}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
 
-          {/* Right Column - Form */}
           <div className="p-8 rounded-[22px] bg-[#0f0f0f] border border-[#212121]">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">
-                  Nombre Completo
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors"
-                  placeholder="Tu nombre"
-                  required
-                />
+                <label htmlFor="name" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">Full name</label>
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors" placeholder="Your name" required />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">
-                  Correo Electronico
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors"
-                  placeholder="tu@email.com"
-                  required
-                />
+                <label htmlFor="email" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">Work email</label>
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors" placeholder="you@company.com" required />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">
-                  Empresa
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors"
-                  placeholder="Nombre de tu empresa"
-                />
+                <label htmlFor="company" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">Company</label>
+                <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors" placeholder="Your company" />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors resize-none"
-                  placeholder="Cuentanos sobre tu proyecto..."
-                  required
-                />
+                <label htmlFor="message" className="block text-xs text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">What are you trying to fix?</label>
+                <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full px-4 py-3.5 bg-black border border-[#212121] rounded-xl text-white text-sm placeholder-[#4a4a4a] focus:outline-none focus:border-[#e36d00] transition-colors resize-none" placeholder="Tell us about the bottleneck, workflow or system you want to improve..." required />
               </div>
 
-              <button
-                type="submit"
-                className="w-full btn-primary-filled py-4"
-              >
-                Enviar Mensaje
+              <button type="submit" className="w-full btn-primary-filled py-4">
+                Send message
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

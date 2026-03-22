@@ -16,11 +16,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', href: '#' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Soluciones', href: '#solutions' },
-    { name: 'Nosotros', href: '#about' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Home', href: '#' },
+    { name: 'Services', href: '#services' },
+    { name: 'Process', href: '#process' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -29,7 +29,6 @@ const Navbar = () => {
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#e36d00] to-[#ffb168] flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(227,109,0,0.4)] transition-shadow">
               <span className="text-white font-semibold text-lg">U</span>
@@ -37,7 +36,6 @@ const Navbar = () => {
             <span className="text-lg font-medium text-white">Unitvent</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
@@ -50,27 +48,15 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="#contact" className="btn-primary">
-              Empezar Proyecto
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
+              Let&apos;s Talk
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white p-2 rounded-lg hover:bg-white/5 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -88,7 +74,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-[#212121] bg-black/95 backdrop-blur-xl">
             <div className="flex flex-col gap-2">
@@ -108,7 +93,7 @@ const Navbar = () => {
                   className="btn-primary-filled w-full justify-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Empezar Proyecto
+                  Let&apos;s Talk
                 </Link>
               </div>
             </div>
