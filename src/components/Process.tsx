@@ -8,6 +8,11 @@ const phases = [
       'We map where operations break down: manual tasks, slow handoffs, disconnected systems and poor visibility.',
     bullets: ['Process discovery', 'System map', 'Priorities and quick wins'],
     metric: '1 week',
+    mock: {
+      title: 'Ops Audit',
+      status: '4 blockers found',
+      rows: ['Manual approvals', 'Scattered updates', 'No stage owner'],
+    },
   },
   {
     step: '02',
@@ -16,6 +21,11 @@ const phases = [
       'We define the ideal flow, business rules and a visual layer so your team can see what is happening in real time.',
     bullets: ['Automated flows', 'Stages and approvals', 'Operational dashboard'],
     metric: '2–3 weeks',
+    mock: {
+      title: 'Workflow View',
+      status: '3 stages automated',
+      rows: ['Intake → Review', 'Review → Approval', 'Approval → Delivery'],
+    },
   },
   {
     step: '03',
@@ -24,6 +34,11 @@ const phases = [
       'We connect APIs, automations and reporting so your team can run with less friction and more control.',
     bullets: ['Real integrations', 'Visible KPIs', 'Launch support'],
     metric: 'Go live',
+    mock: {
+      title: 'Live Dashboard',
+      status: 'Ops running live',
+      rows: ['17 tasks completed', '3 waiting review', '1 urgent issue'],
+    },
   },
 ];
 
@@ -68,14 +83,61 @@ export default function Process() {
                   <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e] animate-pulse [animation-delay:150ms]" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#28c840] animate-pulse [animation-delay:300ms]" />
                 </div>
-                <div className="space-y-3 relative z-10">
-                  <div className="h-3 rounded-full bg-[#161616] w-3/4 process-line process-line-1" />
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="h-20 rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#131313,#0d0d0d)] process-tile" />
-                    <div className="h-20 rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#151515,#101010)] process-tile [animation-delay:120ms]" />
-                    <div className="h-20 rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#1a120d,#100d0b)] ring-1 ring-[#e36d00]/15 process-tile process-tile-accent [animation-delay:240ms]" />
+
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <div className="text-[11px] uppercase tracking-[0.16em] text-[#6e6e6e] mb-1">{phase.mock.title}</div>
+                      <div className="text-sm text-white font-medium">{phase.mock.status}</div>
+                    </div>
+                    <div className="px-2.5 py-1 rounded-full bg-[#151515] border border-[#262626] text-[10px] text-[#ffb168]">
+                      Live
+                    </div>
                   </div>
-                  <div className="h-24 rounded-2xl border border-[#202020] bg-[radial-gradient(circle_at_top,rgba(227,109,0,0.14),transparent_40%),#101010] process-panel" />
+
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#131313,#0d0d0d)] p-3 process-tile">
+                      <div className="text-[10px] text-[#6b6b6b] mb-2">Tasks</div>
+                      <div className="text-lg font-medium">24</div>
+                      <div className="h-1.5 rounded-full bg-[#181818] mt-3 overflow-hidden">
+                        <div className="h-full w-[72%] bg-[#2b2b2b]" />
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#151515,#101010)] p-3 process-tile [animation-delay:120ms]">
+                      <div className="text-[10px] text-[#6b6b6b] mb-2">Waiting</div>
+                      <div className="text-lg font-medium">7</div>
+                      <div className="h-1.5 rounded-full bg-[#181818] mt-3 overflow-hidden">
+                        <div className="h-full w-[34%] bg-[#3a3a3a]" />
+                      </div>
+                    </div>
+                    <div className="rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#1a120d,#100d0b)] ring-1 ring-[#e36d00]/15 p-3 process-tile process-tile-accent [animation-delay:240ms]">
+                      <div className="text-[10px] text-[#b7814d] mb-2">Speed</div>
+                      <div className="text-lg font-medium">+38%</div>
+                      <div className="h-1.5 rounded-full bg-[#22170f] mt-3 overflow-hidden">
+                        <div className="h-full w-[82%] bg-[#e36d00]/70" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="rounded-2xl border border-[#202020] bg-[radial-gradient(circle_at_top,rgba(227,109,0,0.14),transparent_40%),#101010] p-4 process-panel">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="text-[11px] uppercase tracking-[0.16em] text-[#6e6e6e]">Activity</div>
+                      <div className="text-[10px] text-[#6e6e6e]">Updated 2m ago</div>
+                    </div>
+                    <div className="space-y-2.5">
+                      {phase.mock.rows.map((row, rowIndex) => (
+                        <div key={row} className="flex items-center justify-between gap-3 rounded-xl border border-[#1f1f1f] bg-[#0d0d0d]/80 px-3 py-2.5 process-line" style={{ animationDelay: `${rowIndex * 120}ms` }}>
+                          <div className="flex items-center gap-2.5 min-w-0">
+                            <span className="w-2 h-2 rounded-full bg-[#e36d00] shrink-0" />
+                            <span className="text-sm text-[#d6d6d6] truncate">{row}</span>
+                          </div>
+                          <span className="px-2 py-1 rounded-full bg-[#141414] border border-[#252525] text-[10px] text-[#8a8a8a] shrink-0">
+                            Active
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
 
