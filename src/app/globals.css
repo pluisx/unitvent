@@ -406,6 +406,16 @@ a {
   100% { transform: translateX(-8px); opacity: 0.75; }
 }
 
+@keyframes processShimmer {
+  0% { transform: translateX(-140%) skewX(-18deg); opacity: 0; }
+  20% { opacity: 0.14; }
+  100% { transform: translateX(220%) skewX(-18deg); opacity: 0; }
+}
+
+.process-card-tilt {
+  transform-style: preserve-3d;
+}
+
 .process-card:hover .process-mockup {
   transform: translateY(-3px) scale(1.01);
   border-color: rgba(227, 109, 0, 0.22);
@@ -431,5 +441,23 @@ a {
 .process-card:hover .process-check {
   transform: scale(1.08);
   border-color: rgba(227, 109, 0, 0.35);
+}
+
+.process-card:hover {
+  transform: perspective(1200px) rotateX(1.4deg) rotateY(-1.8deg) translateY(-6px);
+}
+
+.process-shimmer {
+  position: absolute;
+  inset: -20% auto -20% -30%;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  filter: blur(10px);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.process-card:hover .process-shimmer {
+  animation: processShimmer 1.8s ease-in-out infinite;
 }
 

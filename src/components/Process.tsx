@@ -49,7 +49,7 @@ export default function Process() {
           {phases.map((phase, index) => (
             <div
               key={phase.step}
-              className={`gradient-border p-6 md:p-7 card-hover animate-fade-in-up delay-${(index + 1) * 100} process-card`}
+              className={`gradient-border p-6 md:p-7 card-hover animate-fade-in-up delay-${(index + 1) * 100} process-card process-card-tilt`}
             >
               <div className="flex items-center justify-between mb-6">
                 <span className="text-[#e36d00] text-sm font-medium tracking-[0.18em]">{phase.step}</span>
@@ -61,13 +61,14 @@ export default function Process() {
               <h3 className="text-2xl font-medium mb-4">{phase.title}</h3>
               <p className="text-[#8a8a8a] mb-6 leading-relaxed">{phase.description}</p>
 
-              <div className="rounded-[20px] border border-[#232323] bg-[#0b0b0b] p-4 mb-6 process-mockup transition-all duration-500">
-                <div className="flex gap-2 mb-4">
+              <div className="rounded-[20px] border border-[#232323] bg-[#0b0b0b] p-4 mb-6 process-mockup transition-all duration-500 relative overflow-hidden">
+                <div className="process-shimmer" />
+                <div className="flex gap-2 mb-4 relative z-10">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57] animate-pulse" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e] animate-pulse [animation-delay:150ms]" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#28c840] animate-pulse [animation-delay:300ms]" />
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 relative z-10">
                   <div className="h-3 rounded-full bg-[#161616] w-3/4 process-line process-line-1" />
                   <div className="grid grid-cols-3 gap-3">
                     <div className="h-20 rounded-2xl border border-[#202020] bg-[linear-gradient(180deg,#131313,#0d0d0d)] process-tile" />
