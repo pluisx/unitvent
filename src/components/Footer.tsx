@@ -12,7 +12,6 @@ const Footer = () => {
     ],
     company: [
       { name: 'Process', href: '#process' },
-      { name: 'Pricing', href: '#pricing' },
       { name: 'Contact', href: '#contact' },
       { name: 'FAQ', href: '#contact' },
     ],
